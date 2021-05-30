@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <style type="text/css">
+    body {
+      text-align: center;
+    }
+  </style>
+  <head>
+    <title>বিস্তারিত তালিকা </title>
+    <link rel="stylesheet" type="text/css" href="detailedList.css" />
+    <!-- <link
+      th:rel="stylesheet"
+      th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+    />
+    <link th:href="@{/styles/aboutDailyCollection.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script> -->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>বিস্তারিত তালিকাঃ</h1>
+      <br><br>
+    <form action="">
+
+            <div class="main">
+              <div class="sub1">
+                <p for="unit">তারিখঃ </p>
+              </div>
+              <div class="sub2">
+                <input type="date" id="date1" />
+              </div>
+            </div>
+           
+            <!-- <label for="date1">tarikh pojnto</label> -->
+            <br />
+            <br />
+            <div class="main">
+              <div class="sub1">
+                <p for="unit">ইউনিট নম্বরঃ</p>
+              </div>
+              <div class="sub2">
+                <input type="text" id="unit" />
+              </div>
+
+            </div>
+       
+            <button type="button">Submit</button>
+
+    </form>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>ইছামতি</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/depositExpenseCalculation.css"
+    />
+    <link rel="stylesheet" href="depositExpenseCalculation.css">
+    <link
+      th:rel="stylesheet"
+      th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+    />
+    <link th:href="@{/styles/aboutDailyCollection.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script>
+
+  </head>
+  
+  <body>
+  
+<div class="container">
+    <h1>ইছামতি</h1>
+    
+
+      <div class="shareCollect">
+     
+        <input type="date" id="date1" />
+      <!-- <p for="date1"> হইতে তারিখ পর্যন্ত </p> -->
+        <p for="date1"> হইতে</p> 
+        <input type="date" id="date1" />
+        <button type="button">Show</button>
+     
+      </div>
+      <div class="grid-container">
+        <div class="grid-item ">  
+      <table>
+        
+        
+        <tr>
+          <td> <strong>সঞ্চয় আদায়ঃ  </strong></td>
+          <!-- <td><span>Value</span></td> -->
+          <td><Span>Value</Span></td>
+        </tr>
+        <tr>
+          <td> <strong>মাসিক সঞ্চয় আদায়ঃ </strong></td>
+          <td><span>Value</span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঝুঁকি/বীমা আদায়ঃ  </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঋণের আসল আদায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঋণের সুদ আদায়ঃ  </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>দণ্ড সুদ আদায়ঃ  </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>Input Dite hobe</strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ব্যাংক কর্তন উত্তোলনঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ব্যাংক সুদ প্রাপ্তিঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঋণের সাঃ চাঃ আদায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ভর্তি ফি আদায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>বিবিধ আদায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>পাসবহি বিক্রিঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>হাওলাত গ্রহনঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>অডিট ফি এর ভ্যাট প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>সিডিএফ প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+      </table>
+      </div>
+    
+      <div class="grid-item ">
+        <table>
+        <tr>
+          <td> <strong>শেয়ার হস্তান্তরঃ </strong></td>
+          <td><span>Value</span></td>
+        </tr>
+        <tr>
+          <td> <strong>সঞ্চয় ফেরতঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>মাসিক সঞ্চয় ফেরতঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঝুঁকি বীমা ফেরতঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঋণ প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ব্যাংকে জমাঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ব্যাংক সুদ ব্যাংকে জমাঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ব্যাংক কর্তনঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>শেয়ারের লভাংশ প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>সঞ্চয়ের সুদ প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>এজিএম উপস্থিতি ভাতাঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>এজিএম খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>কর্মচারীর বেতন প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>কর্মচারীর বোনাস প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ডিডি খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>অনুদান/ সেবা ব্যায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+      </table>
+      </div>
+    
+      <div class="grid-item ">
+        <table>
+        <tr>
+          <td> <strong>ভর্তুকি ভাতা প্রদানঃ </strong></td>
+          <td><span>Value</span></td>
+        </tr>
+        <tr>
+          <td> <strong>ঘর ভাড়া প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>বিদ্যুৎ বিল প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>যাতায়াত খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>আমি খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>স্টেশনারী খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ফটোকপি/ বাইন্ডিংঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>আপ্যায়ন খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>পেপার বিলঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ডিস লাইন বিলঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>ইন্টারনেট বিলঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>বিভিন্ন দিবস উদযাপন ব্যায়ঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>এমসি মিটিং খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>অডিট ফি প্রদানঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>সম্পদ ও আসবাবপত্র খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>হাওলাত পরিশোধঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+        <tr>
+          <td> <strong>বিবিধ খরচঃ </strong></td>
+          <td><span></span></td>
+        </tr>
+      </table>
+      </div>
+ 
+    </div> 
+  </div>
+
+  </body>
+</html>

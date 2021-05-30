@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+        <link rel="stylesheet" href="dropdown.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+
+        <!--wrapper start-->
+        <div class="wrapper">
+            <!--header menu start-->
+            <div class="header">
+                <div class="header-menu">
+                    <div class="title">Title <span>Here</span></div>
+                    <div class="sidebar-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- <ul>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#"><i class="fas fa-bell"></i></a></li>
+                       <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+    
+                      </li>  -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Admin</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#home">Profile</a>
+                          <a href="#about">Activity</a>
+                          <a href="#contact">Logout</a>
+                        </div>
+                    </div>
+                       
+                    <!-- </ul> -->
+                </div>
+            </div>
+            <!--header menu end-->
+            <!--sidebar start-->
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <!-- <center class="profile">
+                        <img src="1.jpg" alt="">
+                        <p>Jessica</p>
+                    </center> -->
+                    <li class="item">
+                        <a href="#" class="menu-btn">
+                            <i class="fas fa-desktop"></i><span onclick="backToHome()" id="home_button">Home</span>
+                        </a>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="#profile" class="menu-btn">
+                            <i class="fas fa-user-circle"></i><span>Recieve Entry<i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#">
+                                <i class="fas fa-image"></i>
+                                    <span onclick="dailyReceive()" id="daily_receive">Daily Receive</span>
+                            </a>
+                            <a href="#"><i class="fas fa-address-card"></i><span onclick="weeklyReceive()" id="weekly_receive">Weekly Receive</span></a>
+                            <a href="#"><i class="fas fa-address-card"></i><span onclick="bankWithdrawal()" id="bank_withdrawal">Bank Withdrawal</span></a>
+                            <a href="#"><i class="fas fa-address-card"></i><span onclick="borrowReceive()" id="borrow_receive">Borrow Receive</span></a>
+                        </div>
+                    </li>
+                    <li class="item" id="messages">
+                        <a href="#messages" class="menu-btn">
+                            <i class="fas fa-envelope"></i><span>Payment Entry<i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-envelope"></i><span onclick="bankDeposite()" id="bank_deposite">Bank Deposite</span></a>
+                            <a href="#"><i class="fas fa-envelope-square"></i><span onclick="paymentGovt()" id="payment_govt">Payment Govt</span></a>
+                            <a href="#"><i class="fas fa-exclamation-circle"></i><span onclick="paySalary()" id="pay_salary">Pay Salary Profit</span></a>
+                            <a href="#"><i class="fas fa-exclamation-circle"></i><span onclick="otherCost()" id="other_cost">Other Cost</span></a>
+                            <a href="#"><i class="fas fa-exclamation-circle"></i><span onclick="payAssets()" id="pay_assets">Pay Assets Borrow</span></a>
+                        </div>
+                    </li>
+                    <li class="item" id="settings">
+                        <a href="#settings" class="menu-btn">
+                            <i class="fas fa-cog"></i><span>Members <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-lock"></i><span onclick="memberEntry()" id="member_entry">Member Entry</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span onclick="cancelMembership()" id="cancel_membership">Cancel Membership</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span onclick="memberBook()" id="member_book">Member Book</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span onclick="socityInfo()" id="socity_info">Socity Info</span></a>
+                           
+                        </div>
+                    </li>
+
+                    <li class="item" id="accounts">
+                        <a href="#accounts" class="menu-btn">
+                            <i class="fas fa-cog"></i><span>Accounts<i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#" ><i class="fas fa-lock"></i><span onclick="cashBook()" id="cash_book">Cash Book</span></a>
+                            <a href="#" ><i class="fas fa-language"></i><span onclick="cashAccounts()" id="cash_accounts">Cash Accounts</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span  onclick="profitLoss()" id="profit_loss">Profit Loss</span></a>
+                            <a href="#" ><i class="fas fa-language"></i><span onclick="detailList()" id="detail_list">Detail List</span></a>
+                            <a href="#" ><i class="fas fa-language"></i><span onclick="generalLedger()" id="general_ledger">General Ledger</span></a>
+                            <a href="#" ><i class="fas fa-language"></i><span onclick="someBalance()" id="some_balance">Some Balance</span></a>
+                            <a href="#" ><i class="fas fa-language"></i><span onclick="personalBalance()" id="personal_balance">Personal Balance</span></a>
+                            <a href="#" ><i class="fas fa-language" onclick="unitList()" id="unit_list"></i><span>Unit List</span></a>
+                            
+                        </div>
+                    </li>
+                    <!-- <li class="item">
+                        <a href="#" class="menu-btn">
+                            <i class="fas fa-info-circle"></i><span>About</span>
+                        </a>
+                    </li> -->
+                </div>
+            </div>
+            <!--sidebar end-->
+            <!--main container start-->
+            <div class="main-container" id="mainC">
+                <!-- <div class="card">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="card">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="card">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div> -->
+                <iframe src="home.html" style="border:none;"height="100%" width="100%" scrolling="yes"></iframe>
+            </div>
+            <!--main container end-->
+        </div>
+        
+        <!--wrapper end-->
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(".sidebar-btn").click(function(){
+                $(".wrapper").toggleClass("collapse");
+            });
+        });
+        </script>
+        <script src="script.js">
+
+        </script>
+
+    </body>
+</html>
+      

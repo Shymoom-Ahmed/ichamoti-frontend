@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+    width: 80%;
+    margin:0 auto;
+  }
+  .container{
+    background: #04244e;  
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+  }
+  h1{
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    text-shadow: 0.5rem 0.5rem 0.5rem #333;
+  }
+  table{
+      width: 100%;
+      margin-top: 2rem;
+  }
+  .main{
+      display:flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      
+  }
+  p{
+      color: #fff;
+  }
+  label{
+      color: #fff;
+  }
+  th{
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+}
+td{
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align:center;
+}
+.sub1{
+    width: 50%;
+    color: #fff;
+}
+.sub2{
+    width: 50%;
+    color: #fff;
+}
+
+img{
+    width: 20rem;
+    height: 20rem;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+}
+.signature{
+    width: 10rem;
+    height: 5rem;
+    justify-content:space-around;
+    padding: 0.2rem;
+}
+.signature img{
+    width:100%;
+    height: 100%;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>ব্যাংক হতে উত্তোলন</title>
+    <!-- <link rel="stylesheet" type="text/css" href="SmallPage.css" /> -->
+    <link rel="stylesheet" href="bankWithdrawal.css">
+    
+<form action="">
+    <link
+      th:rel="stylesheet"
+      th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+    />
+    <link th:href="@{/styles/aboutDailyCollection.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script>
+  </head>
+  <body>
+    
+    
+    
+
+    <div class="container">
+      
+      <h1>অডিট ফি ও সিডিএফ প্রদান</h1>
+
+      <br><br>
+        <form autocomplete="off">
+
+          <div class="main">
+
+            <div class="sub1">
+              <p for="date">তারিখঃ </p>
+            </div>
+            <div class="sub2">
+              <input id="datecng" type="date" name="" />
+            </div>
+          </div>
+        
+          <br>
+          <br>
+          <div class="main">
+            <div class="sub1">
+              <p for="vaucher">ভাউচার নাম্বারঃ </p>
+            </div>
+            <div class="sub2">
+              <input id="vaucher" type="text" name="" />
+            </div>
+          </div>
+   
+          <br>
+          <br>
+
+          <div class="main">
+            <div class="sub1">
+              <p for="withdraw">ব্যাংক উত্তোলন নগদঃ </p>
+              </div>
+              <div class="sub2">
+                <input id="withdraw" type="" name="" />
+              </div>
+          </div>
+          
+          <br>
+          <br>
+        
+          <div class="main">
+          <div class="sub1">
+          <p for="cut">ব্যাংক কর্তনঃ </p>
+          </div>
+          <div class="sub2">
+            <input id="cut" type="" name="" />
+          </div>
+        </div>
+
+          <br>
+          <br>
+
+          <div class="main">
+            <div class="sub1" style="background: #3a8001" >
+              <p for="Total" style="color: #fff" onclick="button()">মোটঃ</p>
+              </div>
+              <div class="sub2">
+                <input id="Total" type="text" name="" />
+              </div>
+          </div>
+
+          <br>
+          <br>
+
+         <button type="submit">Submit</button>
+
+    </form>
+
+
+    </div>
+
+  </body>
+</html>

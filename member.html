@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            th:rel="stylesheet"
+            th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+        />
+        <link th:href="@{/styles/member.css}" rel="stylesheet" />
+        <link rel="stylesheet" href="member.css" />
+        <!--    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.her js}"></script>-->
+        <!--    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>-->
+        <!--    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script>-->
+    </head>
+    <body>
+        <div class="page-content" th:insert="Main/base :: base"></div>
+        <section class="hello" th:fragment="member">
+            <div class="col-12 col-lg-9">
+                <hr />
+                <h1>সদস্য ভর্তি ফর্ম</h1>
+                <hr />
+                <br />
+                <div>
+                    <form
+                        th:action="@{/member/save}"
+                        th:object="${member}"
+                        method="post"
+                        enctype="multipart/form-data"
+                    >
+                        <div class="left">
+                            <!--                        <label for="unitNumber">ইউনিট নাম্বারঃ </label>-->
+                            <!--                        <input-->
+                            <!--                                th:value="*{unitNumber}"-->
+                            <!--                                type="text"-->
+                            <!--                                id="unitNumber"-->
+                            <!--                        />-->
+                            <!--                        <br/>-->
+                            <label> ইউনিট নাম্বার</label>
+                            <input
+                                th:value="*{unitNumber}"
+                                type="text"
+                                value=""
+                            />
+
+                            <label for="unitName" id="unitName"
+                                >ইউনিটের নামঃ
+                            </label>
+                            <input
+                                th:value="*{nameOfUnit}"
+                                type="text"
+                                name="unitName"
+                            />
+                            <br />
+
+                            <label for="memberNumber">সদস্য নম্বরঃ</label>
+                            <input
+                                th:value="*{memberNumber}"
+                                type="text"
+                                id="memberNumber"
+                            />
+                            <br />
+
+                            <label for="nid" id="nid">এনআইডি নম্বরঃ</label>
+                            <input th:value="*{nid}" type="text" name="nid" />
+                            <br />
+
+                            <label for="memberName">সদস্যের নামঃ</label>
+                            <input
+                                th:value="*{name}"
+                                type="text"
+                                name=""
+                                id="memberName"
+                            />
+                            <br />
+                            <label for="fathersName">পিতার নামঃ</label>
+                            <input
+                                th:value="*{fathersName}"
+                                type="text"
+                                name=""
+                                id="fathersName"
+                            />
+                            <br />
+                            <label for="mothersName">মাতার নামঃ</label>
+                            <input
+                                th:value="*{mothersName}"
+                                type="text"
+                                name=""
+                                id="mothersName"
+                            />
+                            <br />
+                            <label>ধর্মঃ</label>
+                            <select th:value="*{religion}">
+                                <option th:text="muslim">মুসলিম</option>
+                                <option th:text="hindu" th:value="Muslim">
+                                    হিন্দু
+                                </option>
+                                <option th:text="Buddhist" th:value="Muslim">
+                                    বৌদ্ধ
+                                </option>
+                                <option th:text="Christan" th:value="Muslim">
+                                    খ্রিস্টান
+                                </option>
+                                <option th:text="others" th:value="Muslim">
+                                    অন্যান্য
+                                </option>
+                            </select>
+
+                            <label for="dateOfBirth">জন্মতারিখঃ</label>
+                            <input
+                                th:value="*{dateOfBirth}"
+                                type="date"
+                                name="dateOfBirth"
+                                id="dateOfBirth"
+                            />
+                            <br />
+                            <label for="age">বয়সঃ </label>
+                            <input
+                                th:value="*{age}"
+                                type="text"
+                                name="age"
+                                id="age"
+                            />
+                            <br />
+                            <label for="mobileNumber">মোবাইল নাম্বারঃ</label>
+                            <input
+                                th:value="*{phoneNumber}"
+                                type="text"
+                                name="mobileNumber"
+                                id="mobileNumber"
+                            />
+                            <label for="dateOfAdmission">ভর্তি তারিখঃ</label>
+                            <input
+                                th:value="*{dateOfAdmission}"
+                                type="date"
+                                name="dateOfAdmission"
+                                id="dateOfAdmission"
+                            />
+                        </div>
+
+                        <div class="right">
+                            <div class="file-input"></div>
+                            <label for="village">গ্রামঃ</label>
+                            <input
+                                th:value="*{village}"
+                                type="text"
+                                id="village"
+                            />
+                            <br />
+                            <label for="postOffice">ডাকঘরঃ</label>
+                            <input
+                                th:value="*{postOffice}"
+                                type="text"
+                                name=""
+                                id="postOffice"
+                            />
+                            <br />
+                            <label for="upzila">উপজেলাঃ </label>
+                            <input
+                                th:value="*{upzila}"
+                                type="text"
+                                name=""
+                                id="upzila"
+                            />
+                            <br />
+                            <label for="district">জেলাঃ </label>
+                            <input
+                                th:value="*{district}"
+                                type="text"
+                                name=""
+                                id="district"
+                            />
+                            <br />
+
+                            <br />
+                            <label for="photo" class="">ছবিঃ</label>
+                            <div class="form-group">
+                                <input
+                                    id="photo"
+                                    type="file"
+                                    name="photo"
+                                    th:value="${member.photo}"
+                                />
+                            </div>
+
+                            <label for="currentAddress">বর্তমান ঠিকানাঃ </label>
+                            <input
+                                th:value="*{currentAddress}"
+                                type="text"
+                                name=""
+                                id="currentAddress"
+                            />
+                            <br />
+                            <br />
+                            <hr />
+                            <h3 style="text-align: center">নোমিনির তথ্য</h3>
+                            <hr />
+                            <label for="nomineeName">নোমিনির নামঃ </label>
+                            <input
+                                th:value="*{nomineeName}"
+                                type="text"
+                                name=""
+                                id="nomineeName"
+                            />
+                            <br />
+                            <label for="nomineeRelation"
+                                >নোমিনির সম্পর্কঃ
+                            </label>
+                            <input
+                                th:value="*{relationWithNominee}"
+                                type="text"
+                                name=""
+                                id="nomineeRelation"
+                            />
+                            <br />
+                            <label for="nomineeAddress">নোমিনির ঠিকানাঃ</label>
+                            <input
+                                th:value="*{nomineeAddress}"
+                                type="text"
+                                id="nomineeAddress"
+                            />
+                            <br />
+
+                            <label for="photo">ছবিঃ</label>
+                            <div class="form-group">
+                                <input
+                                    id="nomineePhoto"
+                                    type="file"
+                                    name="nomineePhoto"
+                                    th:value="${member.photo}"
+                                />
+                            </div>
+                            <br />
+
+                            <label for="nomineeMobileNumber"
+                                >মোবাইল নম্বরঃ</label
+                            >
+                            <input
+                                th:value="*{nomineeMobileNumber}"
+                                type="text"
+                                name="nomineeMobileNumber"
+                                id="nomineeMobileNumber"
+                            />
+                            <br />
+
+                            <label for="nomineeAge">বয়সঃ</label>
+                            <input
+                                th:value="*{nomineeAge}"
+                                type="text"
+                                id="nomineeAge"
+                            />
+                            <br />
+                        </div>
+                        <!--        <button type="submit">Submit</button>-->
+                    </form>
+                    <!-- </div> -->
+                    <br /><br />
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

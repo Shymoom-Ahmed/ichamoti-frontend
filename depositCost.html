@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="depositCost.css">
+    <title>Deposit Cost.</title>
+</head>
+<body>
+        <h1>জমা খরচ হিসাব</h1>
+        
+        <div class="container">
+        
+            <form action="#" th:action="@{member/add}" th:object="${memberDTO}" method="post">
+                <!-- <div class="up">
+                <label for="date">date</label>
+                <input type="date">
+                <label for="date">date</label>
+                <input type="date">
+                </div> -->
+                <hr>
+        
+                <div class="left">
+                    <label for="unitNumber" id="unitNumber">শেয়ার আদায়ঃ</label>
+                    <input th:field="*{unitNumber}" type="text" name="unitNumber" />
+                    <br />
+        
+                    <label for="unitName" id="unitName">সঞ্চয় আদায়ঃ</label>
+                    <input th:field="*{unitName}" type="text" name="unitName" />
+                    <br />
+        
+                    <label for="memberNumber">মাসিক সঞ্চয় আদায়ঃ</label>
+                    <input th:field="*{memberNumber}" type="text" id="memberNumber" />
+                    <br />
+        
+                    <label for="nid" id="nid">ঝুকি/বীমা আদায়ঃ</label>
+                    <input th:field="*{nid}" type="text" name="nid" />
+                    <br />
+        
+                    <label for="memberName">ঋণের আসল আদায়ঃ</label>
+                    <input th:field="*{name}" type="text" name="" id="memberName" />
+                    <br />
+                    <label for="fathersName">ঋণের সুদ আদায়ঃ</label>
+                    <input th:field="*{fathersName}" type="text" name="" id="fathersName" />
+                    <br />
+                    <label for="mothersName">ব্যাংক উত্তোলন নগদঃ</label>
+                    <input th:field="*{mothersName}" type="text" name="" id="mothersName" />
+                    <br />
+                    <label for="religion">ব্যাংক কর্তন উত্তোলনঃ</label>
+                    <input type="text">
+        
+                    <label for="dateOfBirth">ব্যাংক সুদ প্রাপ্তিঃ</label>
+                    <input th:field="*{dateOfBirth}" type="text" name="dateOfBirth" id="dateOfBirth" />
+                    <br />
+                    <label for="age">ঋণের সাঃ চাঃ আদায়ঃ</label>
+                    <input th:field="*{age}" type="text" name="age" id="age" />
+                    <br />
+                    <label for="mobileNumber">ভর্তি ফি আদায়ঃ</label>
+                    <input th:field="*{mobileNumber}" type="text" name="mobileNumber" id="mobileNumber" />
+                    <br />
+                    <label for="mobileNumber">বিবিধ আদায়ঃ</label>
+                    <input th:field="*{mobileNumber}" type="text" name="mobileNumber" id="mobileNumber" />
+                    <br />
+                    <label for="mobileNumber">পাসবহি বিক্রিঃ</label>
+                    <input th:field="*{mobileNumber}" type="text" name="mobileNumber" id="mobileNumber" />
+                    <br />
+                    <label for="mobileNumber">হাওলাত গ্রহনঃ</label>
+                    <input th:field="*{mobileNumber}" type="text" name="mobileNumber" id="mobileNumber" />
+                    <br />
+                    <br>
+                    <hr>
+                    <br>
+                    <label class="diffrent" for="religion">মোট আদায়ঃ</label>
+                    <input type="text">
+                    <label class="diffrent" for="religion">আগত হস্ত মজুদ তহবিলঃ</label>
+                    <input type="text">
+                    <label class="diffrent" for="religion">সর্বমোটঃ</label>
+                    <input type="text">
+                </div>
+        
+        
+                <div class="right">
+                    <div class="file-input">
+                    </div>
+                    <label for="dateOfAdmission">শেয়ার হস্তান্তরঃ</label>
+                    <input th:field="*{village}" type="text" name="dateOfAdmission" id="dateOfAdmission" />
+                    <br />
+                    <label for="age">সঞ্চয় ফেরতঃ</label>
+                    <input th:field="*{age}" type="text" name="age" id="age" />
+                    <br />
+                    <label for="age">মাসিক সঞ্চয় ফেরতঃ</label>
+                    <input th:field="*{age}" type="text" name="age" id="age" />
+                    <br />
+                    <label for="age">ঝুকি/বীমা ফেরতঃ</label>
+                    <input th:field="*{age}" type="text" name="age" id="age" />
+                    <br />
+                    <label for="age">ঋণ প্রদানঃ</label>
+                    <input th:field="*{age}" type="text" name="age" id="age" />
+                    <br />
+                    <label for="village">ব্যাংকে জমাঃ</label>
+                    <input th:field="*{village}" type="text" id="village" />
+                    <br />
+                    <label for="postOffice">ব্যাংক সুদ ব্যাংকে জমাঃ</label>
+                    <input th:field="*{postOffice}" type="text" name="" id="postOffice" />
+                    <br />
+                    <label for="upzila">ব্যাংক কর্তনঃ</label>
+                    <input th:field="*{upzila}" type="text" name="" id="upzila" />
+                    <br />
+                    <label for="district">শেয়ারের লভ্যাংশ প্রদানঃ</label>
+                    <input th:field="*{district}" type="text" name="" id="district" />
+                    <br />
+                    <label for="photo" class="">এজিএম উপস্থিতি ভাতাঃ</label>
+                    <input th:field="*{photo}" type="text" id="photo" class="file" />
+        
+                    <label for="currentAddress">এজিএম খরচঃ</label>
+                    <input th:field="*{currentAddress}" type="text" name="" id="currentAddress" />
+                    <br>
+                    <label for="nomineeName">কর্মচারীর বেতন প্রদানঃ</label>
+                    <input th:field="*{nomineeName}" type="text" name="" id="nomineeName" />
+                    <br />
+                    <label for="nomineeRelation">কর্মচারীর বোনাস প্রদানঃ</label>
+                    <input th:field="*{nomineeRelation}" type="text" name="" id="nomineeRelation" />
+                    <br />
+                    <label for="nomineeAddress">বৈঠকি ভাতা প্রদানঃ</label>
+                    <input th:field="*{nomineeAddress}" type="text" id="nomineeAddress" />
+                    <br />
+        
+                    <label for="nomineePhoto">ঘর ভাড়া প্রদানঃ</label>
+                    <input th:field="*{nomineePhoto}" type="text" id="nomineePhoto" class="file" />
+                    <br />
+        
+                    <label for="nomineeMobileNumber">বিদ্যুৎ বিল প্রদানঃ</label>
+                    <input th:field="*{nomineeMobileNumber}" type="text" name="nomineeMobileNumber" id="nomineeMobileNumber" />
+                    <br />
+                    <label for="nomineeAge">যাতায়াত খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+        
+                    <label for="nomineeAge">জ্বালানি খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">স্টেশনারিক্রয়ঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">ফটোকপি/বাইন্ডিংঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">আপ্যায়ন খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">পেপার বিল প্রদানঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">ডিশ লাইন বিল প্রদানঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">ইন্টারনেট বিল প্রদানঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">বিভিন্ন দিবস উদযাপনঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">এম.সি মিটিং খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">অডিট ফি প্রদানঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">অডিট ফি এর ভ্যাটঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">সিডিএফ প্রদানঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">ডিডি খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">অনু্দান/সেবা খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">সম্পদ/আসবাবপত্র ক্রয়ঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">হাওলাত পরিশোধঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label for="nomineeAge">বিবিধ খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <hr>
+                    <br>
+                    <label class="diffrent" for="nomineeAge">মোট খরচঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label class="diffrent" for="nomineeAge">সমাপনী হস্ত মজুদ তহবিলঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                    <br />
+                    <label class="diffrent" for="nomineeAge">সর্বমোটঃ</label>
+                    <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+        
+                </div>
+            </form>
+            <!-- </div> -->
+            <br><br>
+            <button id="btn">Submit</button>
+        </div>
+</body>
+</html>

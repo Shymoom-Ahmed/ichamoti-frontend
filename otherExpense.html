@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <style type="text/css">
+    body {
+      text-align: center;
+    }
+  </style>
+  <head>
+    <title>অন্যান্য খরচ</title>
+    <link rel="stylesheet" type="text/css" href="otherexpensec.css" />
+
+    <!-- <link
+      th:rel="stylesheet"
+      th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+    />
+    <link th:href="@{/styles/aboutDailyCollection.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script> -->
+  </head>
+  <body>
+      <h1>অন্যান্য খরচ </h1>
+      <form
+            th:action="@{member/add}"
+            th:object="${memberDTO}"
+            method="post"
+          >
+        <div class="container">
+          <div class="head"> 
+            <label for="unitNumber" id="unitNumber">হইতেঃ</label>
+            <input
+              th:field="*{unitNumber}"
+              type="date"
+              name="date"
+            />
+            <br />
+            <label for="memberNumber">পর্যন্তঃ</label>
+            <input th:field="*{memberNumber}" type="text" id="memberNumber" />
+            <br>
+          </div>
+          <br>
+            <hr>
+
+      <div class="form">
+            
+              <div class="left">
+                <label for="memberNumber">আপ্যায়ন খরচঃ</label>
+                <input th:field="*{memberNumber}" type="text" id="memberNumber" />
+                <br />
+
+                <label for="nid" id="nid">যাতায়াত খরচঃ</label>
+                <input
+                  th:field="*{nid}"
+                  type="text"
+                  name="nid"
+                  
+                />
+                <br />
+
+                <label for="memberName">ষ্টেশনারী ক্রয়ঃ</label>
+                <input th:field="*{name}" type="text" name="" id="memberName" />
+                <br />
+                <label for="fathersName">জ্বালানি খরচঃ</label>
+                <input
+                  th:field="*{fathersName}"
+                  type="text"
+                  name=""
+                  id="fathersName"
+                />
+                <br />
+                <label for="mothersName">ফটোকপি এবং বাইন্ডিং খরচঃ</label>
+                <input
+                  th:field="*{mothersName}"
+                  type="text"
+                  name=""
+                  id="mothersName"
+                />
+                <br />
+
+                <label for="dateOfBirth">সেবা/অনুদান ব্যায়ঃ</label>
+                <input
+                  th:field="*{dateOfBirth}"
+                  type="text"
+                  name="dateOfBirth"
+                  id="dateOfBirth"
+                />
+                <br />
+                <label for="age">বিভিন্ন দিবস উদযাপনঃ</label>
+                <input th:field="*{age}" type="text" name="age" id="age" />
+                <br />
+                <label for="mobileNumber">এমসিটি মিটিং খরচঃ</label>
+                <input
+                  th:field="*{mobileNumber}"
+                  type="text"
+                  name="mobileNumber"
+                  id="mobileNumber"
+                />           
+              </div>
+              
+
+              <div class="right">
+                <div class="file-input">
+                  <label for="dateOfAdmission">এজিএম খরচঃ</label>
+                <input
+                  th:field="*{village}"
+                  type="date"
+                  name="dateOfAdmission"
+                  id="dateOfAdmission"
+                />
+                </div>
+
+                <br />
+                <label for="photo" class="">এজিএম উপস্থিতি ভাতাঃ</label>
+                  <input th:field="*{photo}" type="text" id="photo" class="file" />
+
+                <label for="currentAddress">ঘর ভাড়া প্রদানঃ</label>
+                <input
+                  th:field="*{currentAddress}"
+                  type="text"
+                  name=""
+                  id="currentAddress"
+                />
+                <br>
+                <label for="nomineeName">বিদ্যুৎ বিল প্রদানঃ</label>
+                <input
+                  th:field="*{nomineeName}"
+                  type="text"
+                  name=""
+                  id="nomineeName"
+                />
+                <br />
+                <label for="nomineeRelation">পেপার বিল প্রদানঃ</label>
+                <input
+                  th:field="*{nomineeRelation}"
+                  type="text"
+                  name=""
+                  id="nomineeRelation"
+                />
+                <br />
+                <label for="nomineeAddress">ডিশ বিল প্রদানঃ</label>
+                <input th:field="*{nomineeAddress}" type="text" id="nomineeAddress" />
+                <br />
+
+                <label for="nomineePhoto">ইন্টারনেট বিল প্রদানঃ</label>
+                <input
+                  th:field="*{nomineePhoto}"
+                  type="text"
+                  id="nomineePhoto"
+                  class="file"
+                />
+                <br />
+
+                <label for="nomineeMobileNumber">বিবিধ খরচঃ</label>
+                <input
+                  th:field="*{nomineeMobileNumber}"
+                  type="text"
+                  name="nomineeMobileNumber"
+                  id="nomineeMobileNumber"
+                />
+                <br />  
+                <label class="sub-sub" for="total" style="color: #fff" onclick="button()">মোটঃ</label>
+                <input th:field="*{nomineeAge}" type="text" id="nomineeAge" />
+                <br />
+              </div>
+            </div>
+            </form>
+          <!-- </div> -->
+        <br><br>
+          <button id="btn">Submit</button>
+        </div>
+  </body>
+</html>

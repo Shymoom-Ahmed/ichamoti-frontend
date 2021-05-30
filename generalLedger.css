@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+  width: 50%;
+  margin: 0 auto;
+}
+.container {
+  
+  background: #05f038;
+  height: 60vh;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 2rem;
+  background: #000;
+  color: #fff;
+  text-shadow: 0.5rem 0.5rem 0.5rem #333;
+}
+p{
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  float: right;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+.sub1{
+  width: 50%;
+  width: 40%;
+  box-shadow: 0.5rem 0.5rem 0.5rem #333;
+  
+}
+.sub2{
+  width: 50%;
+  margin-left: 2rem;
+}
+
+
+input {
+  width: 35rem;
+  height: 4rem;
+  border-radius: 50px;
+  padding: 0.2rem;
+  border: 1px solid #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5rem 0.5rem 0.5rem #333;
+}
+button{
+  width: 30rem;
+  height: 3.2rem;
+  border: 0.1rem solid rgba(201, 76, 76, 0.1);
+  background: rgb(16, 19, 16,0.5);;
+  color: rgb(39, 235, 13);
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 2rem 2rem 2rem #333;
+  transition: button 0.3s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+ 
+}
+button:hover{
+ 
+  background: rgba(201, 76, 76, 0.1);;
+  color:black;
+  font-weight: 900;
+  transition: 0.5s;
+}

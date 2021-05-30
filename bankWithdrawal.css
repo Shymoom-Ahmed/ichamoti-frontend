@@ -1,0 +1,127 @@
+*{
+  margin : 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  
+}
+html{
+  font-size: 62.5%;
+  width: 100%;
+  /* margin:0 auto; */
+}
+body{
+  /* position: relative; */
+  background: #04244e;
+}
+.container{
+  background: #04244e; 
+  /* position: absolute; */
+  /* margin: 0 auto; */
+  align-items: center;
+  /* overflow: hidden; */
+  /* width: 50%; */
+  top: 0;
+  /* left: 25%; */
+  /* height: 60vh; */
+
+}
+h1{
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  text-shadow: 0.5rem 0.5rem 0.5rem #333;
+}
+form{
+  
+  align-items: center;
+  margin: 0 auto;
+  /* padding-right: 5rem;
+  padding-left: 5rem; */
+  /* padding-top: 3rem; */
+  padding-bottom: 10rem;
+}
+p{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  float: right;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sub1{
+  width: 50%;
+  width: 20%;
+  box-shadow: 0.5rem 0.5rem 0.5rem #000;
+  
+}
+.sub2{
+  width: 20%;
+  margin-left: 3rem;
+}
+
+input{
+  width: 25rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.1rem;
+  /* text-align: center; */
+  align-items: center;
+  padding-left: 0.7rem;
+  justify-content: center;
+  box-shadow: 0.5rem 0.5rem 0.5rem #333;
+  
+}
+
+hr{
+  background: #000;
+  height: 0.4rem;
+  outline: none;
+  /* box-shadow: 0.5rem 0.5rem 0.5rem #333; */
+  background-size: cover;
+  object-fit: cover;
+  border: 0.2rem solid #000;
+}
+
+
+button {
+  width: 25rem;
+  height: 3.2rem;
+  margin: auto;
+  display: block;
+  border: 0.1rem solid white;
+  background: rgb(16, 19, 16, 0.5);
+  color: rgb(39, 235, 13);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+button:hover {
+  background: rgba(201, 76, 76, 0.1);;
+  color:black;
+  font-weight: 900;
+  transition: 0.5s;
+}
+.sub-sub {
+  cursor: pointer;
+}
+

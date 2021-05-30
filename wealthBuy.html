@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <style type="text/css">
+    body {
+      text-align: center;
+    }
+  </style>
+  <head>
+    <title>সম্পদ ক্রয় ও হাওলাত পরিশোধ</title>
+    <link rel="stylesheet" type="text/css" href="wealthBuyc.css" />
+
+    <link
+      th:rel="stylesheet"
+      th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css} "
+    />
+    <link th:href="@{/styles/aboutDailyCollection.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.6.0/js/bootstrap.min.js}"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>সম্পদ ক্রয় ও হাওলাত পরিশোধ</h1>
+
+      <form autocomplete="off">
+        <div class="main">
+          <div class="sub1">
+            <p for="date">তারিখঃ</p>
+          </div>
+
+          <div class="sub2">
+            <input id="datecng" type="date" name="" />
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="main">
+          <div class="sub1">
+            <p for="vaucher">ভাউচার নাম্বারঃ</p>
+          </div>
+          <div class="sub2">
+            <input id="vaucher" type="text" name="" placeholder="0" />
+          </div>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+        <div class="main">
+          <div class="sub1">
+            <p for="auditfeereturn">আসবাবপত্র/ সম্পদ ক্রয়ঃ</p>
+          </div>
+          <div class="sub2">
+            <input id="auditfeereturncng" type="" name="" placeholder="0.0" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="main">
+          <div class="sub1">
+            <p for="auditfeevat">সম্পদের অবচয় বাদঃ</p>
+          </div>
+          <div class="sub2">
+            <input id="auditfeevat" type="" name="" placeholder="0.0" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="main">
+          <div class="sub1">
+            <p for="cdf">হাওলাত পরিশোধঃ</p>
+          </div>
+          <div class="sub2">
+            <input id="cdf" type="" name="" placeholder="0.0" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="main">
+          <div class="sub1 sub-sub" style="background: #3a8001">
+            <p for="total" style="color: #fff" onclick="button()">মোট =</p>
+          </div>
+          <div class="sub2">
+            <input id="total" type="text" name="" placeholder="0.0" />
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  </html>
+
+        
+     

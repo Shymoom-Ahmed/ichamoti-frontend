@@ -1,0 +1,151 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  /* background-color: #09ec6f59; */
+}
+h1 {
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  
+}
+
+.left-half {
+  background: #74b10459;
+  text-align: end;
+  padding-right: 1rem;
+}
+
+.right-half {
+  background: #74b10459;
+  text-align: start;
+  padding-left: 1rem;
+}
+
+.block {
+  display: block;
+  width: 400%;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.block1 {
+  display: block;
+  width: 400%;
+  border: none;
+  background-color: #295dac;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+  /* margin-bottom: 5px; */
+}
+.block1:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.block2 {
+  display: block;
+  width: 400%;
+  border: none;
+  background-color: #9113c4f8;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+  /* margin-bottom: 5px; */
+}
+.block2:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.block3 {
+  display: block;
+  width: 400%;
+  border: none;
+  background-color: #09374dfb;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+  /* margin-bottom: 5px; */
+}
+.block3:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+main {
+  background-color: aqua;
+  /* text-align: center; */
+  /* height: auto; */
+  display: grid;
+  text-align: center;
+  justify-items: first baseline;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "box1 box2 box3 box4";
+  grid-auto-rows: minmax(100px, auto);
+  /* column-gap: 2rem; */
+  /* row-gap: 5rem; */
+}
+
+.box1 {
+  display: flex;
+  grid-area: box1;
+  text-align: center;
+  /* align-items: center; */
+  justify-items: first baseline;
+
+}
+.box2 {
+  display: flex;
+  grid-area: box2;
+  text-align: center;
+  /* align-items: center; */
+
+}
+.box3 {
+  display: flex;
+  grid-area: box3;
+
+}
+.box4 {
+  display: flex;
+  grid-area: box4;
+ 
+}
